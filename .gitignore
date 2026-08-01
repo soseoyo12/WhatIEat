@@ -105,3 +105,8 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,swiftpackagemanager
+
+# 임시 Resources 폴더
+research/
+
+.DS_Store
