@@ -88,7 +88,6 @@ iOSInjectionProject/
 ### SwiftPackageManager ###
 Packages
 xcuserdata
-*.xcodeproj
 
 
 ### Xcode ###
@@ -110,3 +109,6 @@ xcuserdata
 research/
 
 .DS_Store
+
+# 에이전트 도구 상태 폴
+.omo/
