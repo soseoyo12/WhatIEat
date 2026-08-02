@@ -12,7 +12,7 @@ struct Menus: Identifiable, Codable {
     let menu: String
 }
 
-struct WelcomeElement: Codable {
+struct Restaurants: Codable {
     let id: String
     let menu: String
     let restaurantCount: Int
@@ -57,4 +57,17 @@ struct Menu: Codable {
 struct Review: Codable {
     let rating: Int
     let text: String
+}
+
+func loadJSON() -> [Restaurants] {
+    let url = Bundle.main.url(forResource: "restaurants", withExtension: "json")!
+    
+    let data = try! Data(contentsOf: url)
+    
+    let decoder = JSONDecoder()
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
+    
+    let result = try! decoder.decode([Restaurants].self, from: data)
+    print("decode \(result.count)개 로드")
+    return result
 }
